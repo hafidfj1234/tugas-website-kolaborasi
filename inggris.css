@@ -522,7 +522,7 @@ footer p {
    RESPONSIVE DESIGN
 ============================== */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
     .members-section {
         padding: 60px 6%;
