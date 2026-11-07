@@ -1,0 +1,1154 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #172d46;
+    --blue: #315b83;
+    --orange: #e99a55;
+    --cream: #f8f5ee;
+    --white: #ffffff;
+    --text: #26364a;
+    --muted: #718092;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    linear-gradient(
+      rgba(10, 35, 25, 0.55),
+      rgba(10, 35, 25, 0.70)
+    ),
+    url("WhatsApp\ Image\ 2026-11-06\ at\ 11.46.19.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: var(--text);
+  line-height: 1.7;
+}
+
+
+/* NAVBAR */
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #172d4610;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-button {
+    background: var(--navy);
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+/* HERO */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tag {
+    display: inline-block;
+    background: #f4dfc9;
+    color: #a75f28;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 57px);
+    line-height: 1.2;
+    margin: 25px 0;
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.hero h1 span,
+.section h2 span {
+    color: var(--orange);
+}
+
+.hero-text p {
+    color: var(--muted);
+    max-width: 550px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 14px 27px;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.main-button:hover {
+    background: var(--navy);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    height: 350px;
+    background: linear-gradient(145deg, #315b83, #172d46);
+    border-radius: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-box {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.image-icon {
+    display: block;
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.image-box h3 {
+    font-size: 25px;
+}
+
+.image-box p {
+    color: #e8d8c7;
+    font-size: 13px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #ffffff30;
+}
+
+.circle-one {
+    width: 300px;
+    height: 300px;
+    top: -120px;
+    right: -70px;
+}
+
+.circle-two {
+    width: 250px;
+    height: 250px;
+    bottom: -140px;
+    left: -60px;
+}
+
+/* GENERAL SECTION */
+.section {
+    padding: 85px 30px;
+}
+
+.section-label {
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.problem,
+.products,
+.members {
+    background: var(--white);
+}
+
+.problem,
+.solution,
+.products,
+.subjects,
+.members,
+.contact {
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+}
+
+/* PROBLEM */
+.problem-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background: #f8f5ee;
+    padding: 35px;
+    border-left: 5px solid var(--orange);
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.problem-number {
+    background: var(--orange);
+    color: white;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.problem-box h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.problem-box p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* SOLUTION */
+.solution {
+    background: var(--navy);
+}
+
+.solution h2 {
+    color: white;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.solution .section-description {
+    color: #c3cfda;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.solution-card {
+    background: #ffffff12;
+    border: 1px solid #ffffff25;
+    border-radius: 18px;
+    padding: 28px;
+    transition: .3s;
+}
+
+.solution-card:hover {
+    background: #ffffff20;
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    background: #e99a5530;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.solution-card h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.solution-card p {
+    color: #c3cfda;
+    font-size: 13px;
+}
+
+
+/* PRODUK */
+.products {
+    padding: 100px 8%;
+    background: #f8faf7;
+}
+
+.products h2 {
+    font-size: 42px;
+    margin: 15px 0;
+    color: #183b2b;
+}
+
+.products h2 span {
+    color: #65a875;
+}
+
+.section-description {
+    max-width: 550px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* GRID PRODUK */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.product-card {
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* GAMBAR */
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+/* KATEGORI */
+.product-category {
+    display: inline-block;
+    color: #43865a;
+    background: #e8f5eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* JUDUL */
+.product-card h3 {
+    color: #183b2b;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+/* DESKRIPSI */
+.product-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* TOMBOL */
+.product-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #286b45;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.product-button:hover {
+    background: #17482d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products h2 {
+        font-size: 32px;
+    }
+}
+
+
+
+
+/* ==============================
+   MATA PELAJARAN
+============================== */
+
+.mapel {
+    width: 100%;
+    padding: 100px 8%;
+    background: #ffffff;
+    position: relative;
+}
+
+/* CONTAINER */
+
+.pelajaran-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADING */
+
+.heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.subheading {
+    display: inline-block;
+    color: #269b62;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #183b2b;
+}
+
+.heading h1 span {
+    color: #269b62;
+}
+
+.heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* CARD CONTAINER */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* MAPEL CARD */
+
+.mapel-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px 35px;
+    background: #ffffff;
+    border: 1px solid #e5eee8;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.mapel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(38, 155, 98, 0.12);
+    border-color: #269b62;
+}
+
+/* NOMOR CARD */
+
+.mapel-number {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    background: #e8f5eb;
+    color: #269b62;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* JUDUL CARD */
+
+.mapel-card h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #183b2b;
+}
+
+/* DESKRIPSI */
+
+.mapel-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* TOMBOL */
+
+.mapel-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #269b62;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.mapel-link:hover {
+    background: #187b4b;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .mapel {
+        padding: 70px 5%;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+
+    .mapel-card {
+        max-width: 100%;
+        padding: 30px 25px;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .mapel {
+        padding: 70px 5%;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+
+    .mapel-card {
+        max-width: 100%;
+        padding: 30px 25px;
+    }
+
+}
+
+
+/* GRID ANGGOTA */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD ANGGOTA */
+.member-card {
+    background: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* FOTO ANGGOTA */
+.member-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #e1f0e4;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NAMA ANGGOTA */
+.member-card h3 {
+    color: #183b2b;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+/* KELAS */
+.member-card p {
+    color: #65a875;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .members h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* SOCIAL MEDIA ANGGOTA */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* EMAIL */
+.social-links .email {
+    background: #e45b4f;
+}
+
+/* WHATSAPP */
+.social-links .whatsapp {
+    background: #25D366;
+}
+
+/* INSTAGRAM */
+.social-links .instagram {
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+}
+
+/* HOVER */
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+
+/* CONTACT */
+.contact {
+    background: #e9e4d9;
+}
+
+.contact > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-info h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--orange);
+}
+
+form button {
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    transition: .3s;
+}
+
+form button:hover {
+    background: var(--orange);
+}
+
+/* FOOTER */
+footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    color: #b8c4d0;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        font-size: 10px;
+        padding: 9px 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 22px;
+        gap: 35px;
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .solution-grid,
+    .product-grid,
+    .subject-grid,
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-box {
+        padding: 22px;
+        gap: 15px;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .image-icon {
+        font-size: 75px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* BACKGROUND GRADASI */
+
+.pelajaran {
+    min-height: 100vh;
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #fff0d9 0%,
+        #f5c99f 25%,
+        #b8d8eb 60%,
+        #183b5b 100%
+    );
+}
+
+/* HIASAN BACKGROUND */
+
+.pelajaran::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255,255,255,0.22);
+    border-radius: 50%;
+    top: -120px;
+    right: -80px;
+    filter: blur(5px);
+}
+
+.pelajaran::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(233,149,69,0.25);
+    border-radius: 50%;
+    bottom: -120px;
+    left: -100px;
+    filter: blur(5px);
+}
+
+.pelajaran-container {
+    max-width: 1150px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* JUDUL */
+
+.heading {
+    margin-bottom: 45px;
+}
+
+.subheading {
+    color: #c8752d;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.heading h1 {
+    font-size: clamp(38px, 5vw, 55px);
+    color: #183b5b;
+    margin: 15px 0;
+    font-weight: 800;
+}
+
+.heading h1 span {
+    color: #df8c3d;
+}
+
+.heading p {
+    max-width: 550px;
+    color: #405c76;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* KARTU PELAJARAN */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 253, 248, 0.96);
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.8);
+    box-shadow: 0 15px 35px rgba(24,59,91,0.13);
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 40px rgba(24,59,91,0.22);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: #e5f1fa;
+    border-radius: 50%;
+    right: -40px;
+    bottom: -45px;
+}
+
+/* BAGIAN ATAS KARTU */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-number {
+    color: #df8c3d;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #e5f1fa;
+    color: #183b5b;
+    border-radius: 16px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* ISI KARTU */
+
+.card h2 {
+    color: #183b5b;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #687987;
+    font-size: 14px;
+    line-height: 1.9;
+    min-height: 80px;
+}
+
+/* LINK KARTU */
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    color: #c8752d;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.card-link span {
+    font-size: 21px;
+    color: #183b5b;
+}
+
+.card-link:hover {
+    color: #183b5b;
+    gap: 18px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 700px) {
+    .pelajaran {
+        padding: 65px 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 27px;
+    }
+
+    .heading h1 {
+        font-size: 38px;
+    }
+
+    .card p {
+        min-height: auto;
+    }
+}
+.mapel-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+    align-items: stretch;
+}
+
+.mapel-card {
+    background: #f5f1ed;
+    padding: 35px;
+    border-radius: 25px;
+    min-height: 350px;
+}
+
+.mapel-card h1 {
+    color: #d97706;
+    font-size: 55px;
+}
+
+.mapel-card h2 {
+    color: #172554;
+}
+#Kolaborasi {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 25px;
+    align-items: stretch;
+    width: 100%;
+}
+
+#Kolaborasi .mapel-card {
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 0;
+}

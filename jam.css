@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --orange: #ff8c24;
+    --navy: #142b4a;
+    --blue: #168aad;
+    --cream: #fff1df;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at 5% 5%, #ffe0bb 0, transparent 25%),
+        radial-gradient(circle at 95% 35%, #d7f1ff 0, transparent 28%),
+        #f4f7fc;
+    color: var(--navy);
+    line-height: 1.9;
+    padding: 55px 9%;
+    position: relative;
+}
+
+/* DEKORASI */
+body::before {
+    content: "♻";
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    font-size: 150px;
+    color: rgba(22,138,173,.07);
+    z-index: -1;
+}
+
+/* JUDUL UTAMA */
+body > h1:first-of-type {
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 45px;
+    max-width: 800px;
+}
+
+/* JUDUL MATERI */
+h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(110deg, #142b4a, #168aad);
+    padding: 22px 28px;
+    border-radius: 17px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 12px 25px rgba(20,43,74,.18);
+    border-left: 8px solid var(--orange);
+    transition: .3s;
+}
+
+h3:hover {
+    transform: translateX(8px);
+    box-shadow: 0 15px 30px rgba(22,138,173,.25);
+}
+
+/* PARAGRAF */
+p {
+    background: white;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    color: #58677a;
+    font-size: 15px;
+    line-height: 2;
+    text-align: justify;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 8px 25px rgba(20,43,74,.055);
+    transition: .3s;
+    position: relative;
+}
+
+p:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 13px 30px rgba(20,43,74,.1);
+}
+
+/* SUBJUDUL */
+h2 {
+    font-size: 23px;
+    color: var(--blue);
+    font-weight: 800;
+    margin: 30px 0 15px;
+    padding-left: 15px;
+    border-left: 5px solid var(--orange);
+}
+
+/* DAFTAR */
+ul, ol {
+    background: white;
+    padding: 25px 55px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 8px 25px rgba(20,43,74,.06);
+}
+
+li {
+    color: #536579;
+    padding: 7px 0;
+    transition: .2s;
+}
+
+li:hover {
+    color: var(--orange);
+    padding-left: 7px;
+}
+
+/* GAMBAR */
+img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+    margin: 30px auto;
+    border-radius: 25px;
+    border: 7px solid white;
+    box-shadow: 0 18px 40px rgba(20,43,74,.16);
+    transition: .4s;
+}
+
+img:hover {
+    transform: scale(1.025);
+}
+
+/* TABEL BIAYA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 30px 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(20,43,74,.09);
+}
+
+th {
+    background: linear-gradient(120deg, #142b4a, #168aad);
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+}
+
+td {
+    padding: 17px;
+    text-align: center;
+    border-bottom: 1px solid #e8edf3;
+    color: #526276;
+}
+
+tr:nth-child(even) {
+    background: #eef8fc;
+}
+
+tr:hover {
+    background: #fff0dc;
+}
+
+/* PEMISAH MATERI */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--blue), transparent);
+    margin: 40px 0;
+}
+
+/* ANIMASI */
+@keyframes masuk {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h3, p, img, table, ul, ol {
+    animation: masuk .7s ease both;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edf1f7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--orange), var(--blue));
+    border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    body {
+        padding: 30px 5%;
+    }
+
+    body > h1:first-of-type {
+        font-size: 37px;
+    }
+
+    h3 {
+        font-size: 19px;
+        padding: 18px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 19px;
+    }
+
+    ul, ol {
+        padding: 20px 40px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+/* HERO FOTO JAM DVD */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 65px 45px;
+    background: linear-gradient(120deg, #ffffff, #fff0dd, #e6f6ff);
+    border-radius: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content small {
+    color: #ed851b;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0;
+    color: #142b4a;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #f28c28;
+}
+
+.hero-content p {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 7px solid white;
+    box-shadow: 0 20px 40px rgba(20,43,74,.2);
+}
+
+.btn {
+    display: inline-block;
+    background: #f28c28;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background: #142b4a;
+}
+
+@media(max-width:768px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+}
+/* TABEL ESTIMASI BIAYA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 30px 0;
+    box-shadow: 0 15px 35px rgba(16,37,66,.12);
+}
+
+th {
+    background: linear-gradient(120deg, #102542, #168aad);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+td {
+    padding: 17px;
+    text-align: center;
+    color: #526176;
+    border-bottom: 1px solid #e8edf4;
+}
+
+tbody tr:nth-child(even) {
+    background: #eaf7fc;
+}
+
+tbody tr:hover {
+    background: #fff0dc;
+}
+
+/* KOTAK KEUNTUNGAN */
+.total-box {
+    background: linear-gradient(120deg, #102542, #168aad);
+    padding: 30px;
+    border-radius: 22px;
+    margin-top: 30px;
+    color: white;
+}
+
+.total-box h3 {
+    margin-top: 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    color: #ffb34d;
+    padding: 0;
+}
+
+.total-box p {
+    background: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    padding: 5px 0;
+}
+
+.total-box h2 {
+    color: #ffb34d;
+}
+/* TABEL ALAT DAN BAHAN */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: 25px 0 40px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(16,37,66,.12);
+}
+
+table th {
+    background: linear-gradient(120deg, #102542, #168aad);
+    color: white;
+    padding: 18px 12px;
+    font-weight: 800;
+}
+
+table td {
+    padding: 16px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e8edf4;
+    color: #526176;
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background: #eaf7fc;
+}
+
+table tbody tr:hover {
+    background: #fff0dc;
+    transition: .3s;
+}
+
+body > h2,
+h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.back-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: fit-content;
+    padding: 13px 24px;
+
+    margin: 40px auto;
+
+    background: #ed8528;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background: #193e63;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(25, 62, 99, 0.18);
+}
+
+.back-home i {
+    font-size: 14px;
+}
